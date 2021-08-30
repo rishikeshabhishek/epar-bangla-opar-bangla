@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    background: url(/myImages/banner.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.banner .content {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.banner h2 {
+    color: rgb(234, 235, 255);
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.banner h3 {
+    color: rgb(234, 235, 255);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.banner p {
+    color: rgb(234, 235, 255);
+    font-size: 1.3rem;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.btn {
+    background: rgba(223, 8, 8, 0.904);
+    font-size: 1.3rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 25px;
+    letter-spacing: 1.5px;
+    border-radius: 25px;
+    transition: 0.8s;
+}
+
+.btn:hover {
+    letter-spacing: 4px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    padding: 40px 0px;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.8s;
+}
+
+header.sticky {
+    background: rgb(255, 255, 255);
+    padding: 10px 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header .logo {
+    padding-left: 60px;
+}
+
+header .navbar {
+    position: relative;
+    display: flex;
+    padding-right: 60px;
+}
+
+header.sticky .navbar li a {
+    color: #111;
+}
+
+header .navbar li {
+    list-style: none;
+    font-size: 1.2rem;
+    margin-left: 30px;
+    display: inline-block;
+    position: relative;
+}
+
+header .navbar li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 300px;
+    text-transform: uppercase;
+}
+
+header li a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background: #ff1101;
+    left: 0;
+    bottom: -10px;
+    transition: 0.8s;
+}
+
+header li a:hover::after {
+    width: 100%;
+}
+
+.about {
+    padding: 50px 100px 0 100px;
+}
+
+.about .row .left .title {
+    color: #111111;
+    font-size: 2rem;
+    font-weight: 700px;
+}
+
+.about .row .left p {
+    color: #313131;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.about .row .left .title span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0 0;
+}
+
+.row .left {
+    position: relative;
+    width: 50%;
+}
+
+.row .right {
+    position: relative;
+    width: 45%;
+    transition: 0.8s ease-in-out;
+}
+
+.row .right:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.row .right .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.row .right .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.menu {
+    padding: 60px 0 1px 0;
+}
+
+.menu .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu .title h2 {
+    color: #111111;
+    font-size: 2rem;
+    font-weight: 700px;
+}
+
+.menu .title h2 span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.menu .title p {
+    font-size: 1.2rem;
+}
+
+.menu .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.menu .content .container {
+    width: 340px;
+    margin: 20px;
+    border: 15px solid white;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+
+.menu .content .container .img {
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu .content .container .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #080808;
+}
+
+.menu .content .container .img:hover .overlay {
+    opacity: 0.9;
+}
+
+.menu .content .container .overlay .hoverText {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+}
+
+.menu img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu .content .container .text {
+    padding: 15px 0 5px;
+}
+
+.menu .content .container .text h3 {
+    color: rgb(0, 0, 0);
+    font-weight: 300px;
+}
+
+.menu .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.expert {
+    padding: 60px 0 0 0;
+}
+
+.expert .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.expert .title h2 {
+    color: #111111;
+    font-size: 2rem;
+    font-weight: 700px;
+}
+
+.expert .title h2 span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.expert .title p {
+    font-size: 1.2rem;
+}
+
+.expert .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.expert .content .container {
+    width: 250px;
+    margin: 15px;
+}
+
+.expert .content .container .img {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.expert .content .container .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+}
+
+.expert .content .container .img img:hover {
+    transform: scale(.9);
+}
+
+.expert .content .container .text {
+    padding: 15px 0 5px;
+}
+
+.expert .content .container .text h3 {
+    font-weight: 400;
+    color: #111;
+}
+
+.testimonials .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.testimonials .title h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700px;
+}
+
+.testimonials .title h2 span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.testimonials .title p {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.testimonials {
+    background: url(/myImages/testibg.jpg);
+    background-size: cover;
+    margin-bottom: 50px;
+    background-attachment: fixed;
+}
+
+.testimonials .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.testimonials .content .container {
+    width: 300px;
+    margin: 20px;
+    padding: 40px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.7);
+}
+
+.testimonials .content .container .img {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonials .content .container .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials .content .container .text {
+    text-align: center;
+    line-height: 25px;
+}
+
+.testimonials .content .container .text p {
+    color: #666;
+    font-style: italic;
+}
+
+.testimonials .content .container .text h3 {
+    margin-top: 20px;
+    color: #111;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.contact .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .title h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700px;
+}
+
+.contact .title h2 span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.contact .title p {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.contact {
+    background: url(/myImages/contactbg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 1px 0 50px 0;
+    margin-bottom: 20px;
+}
+
+.contact .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.contactForm {
+    padding: 75px 50px;
+    background: white;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
+    margin-top: 50px;
+    border-radius: 15px;
+    width: 30%;
+}
+
+.contactForm h3 {
+    color: black;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500px;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactForm .inputBox input,
+.inputBox textarea {
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+    border-radius: 10px;
+}
+
+.contactForm .inputBox input[type="submit"] {
+    font-size: 1em;
+    color: white;
+    background: #ff0157;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.map {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.copyright {
+    margin-top: 100px;
+    padding: 30px 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    text-align: center;
+    background: #4f005f;
+    margin-bottom: 8px;
+}
+
+.copyright p {
+    color: rgb(255, 255, 255);
+}
+
+.copyright a {
+    color: #cec1ff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+/* #topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 6px;
+    font-size: 22px;
+    width: 50px;
+    height: 60px;
+    background-color: #ff4da6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    display: none;
+} */
